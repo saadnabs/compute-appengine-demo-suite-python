@@ -46,6 +46,8 @@ instructions.
    More information about client secrets can be found in the
    [API client library documentation][3].
 
+   For creating new credentials, go to the API Manager -> Credentials, and create new OAuth credentials and use the client ID and secret provided.
+
 3. (optional) Update any of the defaults in the settings.json to
    match your preferences.
 

@@ -2,10 +2,10 @@
     "project": "compute-engine-demo",
     "compute": {
         "api_version": "v1",
-        "image": "debian-7-wheezy-v20140318",
-        "image_project": "debian-cloud",
-        "machine_type": "n1-standard-1",
-        "zone": "us-central1-f",
+        "image": "windows-server-2012-r2-dc-v20160224",
+        "image_project": "windows-cloud",
+        "machine_type": "n1-standard-4",
+        "zone": "europe-west1-d",
         "network": "default",
         "access_configs": [],
         "firewall": {
