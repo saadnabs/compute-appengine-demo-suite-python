@@ -20,6 +20,7 @@
 <h1>
   Welcome to Quick Start!
 </h1>
+<div style="float:left">
 <p>
   This demo shows just how quick it is to start hundreds of instances.
 </p>
@@ -28,7 +29,33 @@
   <a href="/{{ demo_name }}/project">Edit</a> your Compute Engine project
   information.
 </p>
-
+</div>
+<div style="float:right">
+	<table>
+		<thead><tr><th>Legend</th></tr></thead>
+		<tbody>
+			<tr>
+				<td>Provisioning</td>
+				<td><div class="color-block status-provisioning" title="Resources are being reserved for the instance, it's not yet running"><i class="icon-ok icon-2x"></i></div></td>
+				<td>Staging</td>
+				<td><div class="color-block status-staging" title="Resources have been acquired and the instance is being prepared for launch"><i class="icon-ok icon-2x"></i></div></td>
+				<td>Running</td>
+				<td><div class="color-block status-running" title="Instance is booting up or running, SSH-able imminently"><i class="icon-ok icon-2x"></i></div></td>
+			</tr>
+			<tr>
+				<td>Stopping</td>
+				<td><div class="color-block status-stopping" title="The instance is being stopped either due to failure or shutdown."><i class="icon-ok icon-2x"></i></div></td>
+<!-- 				<td>Stopped</td> -->
+<!-- 				<td><div class="color-block status-stopped"><i class="icon-ok icon-2x"></i></div></td> -->
+				<td>Terminated</td>
+				<td><div class="color-block status-terminated" title="The instance was shut down"><i class="icon-ok icon-2x"></i></div></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div>
 <p>
   <input type="text" id="num-instances" value="{{startedVMs}}">
   <input type="hidden" id="target-instances" value="{{targetVMs}}">
@@ -44,3 +71,4 @@
 </div>
 <div id="instances"></div>
 {% endblock %}
+</div>

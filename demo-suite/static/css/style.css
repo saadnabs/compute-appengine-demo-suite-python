@@ -66,7 +66,7 @@ h1 {
 }
 
 .status-stopping {
-  background-color: #D50F25; // Red
+  background-color: #D50F25; // Red other: #A60F5F
 }
 
 .status-stopped {
