@@ -37,4 +37,4 @@ nosetests.xml
 # temporary files downloaded when fetching dependencies
 temp_download/
 
-client_secret.json
+client_secrets.json
