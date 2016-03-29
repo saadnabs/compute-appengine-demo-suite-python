@@ -177,12 +177,14 @@ Squares.prototype.getNumCols_ = function() {
  */
 Squares.prototype.update = function(updateData) {
   var instanceStatus = updateData['instances'] || {};
+  //console.log("this.instanceNames_.length: " + this.instanceNames_.length + " -- instanceStatus.length: " + instanceStatus.length);
   for (var i = 0; i < this.instanceNames_.length; i++) {
     var instanceName = this.instanceNames_[i];
     var statusClass = null;
     if (instanceStatus.hasOwnProperty(instanceName)) {
       var status = instanceStatus[instanceName]['status'];
       statusClass = this.statusClasses_[status];
+      console.log("status: " + status);
       if (!statusClass) {
         statusClass = this.statusClasses_['OTHER'];
       }

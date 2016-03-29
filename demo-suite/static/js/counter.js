@@ -41,6 +41,7 @@ var Counter = function(container, targetState, counterOptions) {
   }
   var counterElement = container.getContext('2d');
   this.counter_ = new odometer_(counterElement, counterOptions);
+  this.container_ = container;
 
   this.targetState = 'RUNNING';
   if (targetState) {
@@ -55,6 +56,8 @@ var Counter = function(container, targetState, counterOptions) {
  */
 Counter.prototype.counter_ = null;
 
+Counter.prototype.container_ = null;
+
 /**
  * Update the number of running instances. This method is called by the
  * Gce.heartbeat method, and is passed a dictionary containing the instance
@@ -63,6 +66,19 @@ Counter.prototype.counter_ = null;
  *     information.
  */
 Counter.prototype.update = function(updateData) {
+	/** When the counter gets incremented for the first time, show the time that the first server became ready **/
+  if (this.counter_.getValue() == 0 && updateData['stateCount'][this.targetState] > 0) {
+	  var parentNode = this.container_.parentNode;
+	  var timeDiv = parentNode.querySelector("#timer");
+	  var time = timeDiv.textContent;
+	  console.log("time at 1 running: " + time);
+	  
+	  var firstInstanceDiv = parentNode.querySelector("#first-instance");
+	  firstInstanceDiv.textContent = "First instance started up within " + time;
+	  
+	  console.log("first time counter is updated");
+  }
+  
   this.counter_.setValue(updateData['stateCount'][this.targetState]);
 };
 

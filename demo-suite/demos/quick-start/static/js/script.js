@@ -91,6 +91,7 @@ QuickStart.prototype.initializeButtons_ = function(gce) {
     $('#start').addClass('disabled');
     $('#reset').removeClass('disabled');
     $('#in-progress').text(STARTING);
+    $('#first-instance').text("");
 
     var instanceNames = [];
     for (var i = 0; i < numInstances; i++) {
@@ -129,6 +130,7 @@ QuickStart.prototype.initializeButtons_ = function(gce) {
     $('#start').addClass('disabled');
     $('#reset').removeClass('disabled');
     $('#in-progress').text(RESETTING);
+    $('#first-instance').text("");
     gce.stopInstances(function() {
       // Reset completed, allow start button and disallow reset button.
       $('#start').removeClass('disabled');
