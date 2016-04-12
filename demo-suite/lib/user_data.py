@@ -31,6 +31,8 @@ jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(''))
 GCE_PROJECT_ID = 'gce-project-id'
 GCE_ZONE_NAME = 'gce-zone-name'
 GCE_LOAD_BALANCER_IP = 'gce-load-balancer-ip'
+GCE_IMAGE_NAME = 'gce-image-name'
+GCE_IMAGE_FAMILY = 'gce-image-family'
 GCS_PROJECT_ID = 'gcs-project-id'
 GCS_BUCKET = 'gcs-bucket'
 GCS_DIRECTORY = 'gcs-directory'
@@ -52,6 +54,18 @@ DEFAULTS = {
         'required': False,
         'label': 'Compute Engine Load Balancer public IP address(s) (e.g.: 1.2.3.4,2.2.2.2)',
         'name': 'gce-load-balancer-ip'
+    },
+    GCE_IMAGE_NAME: {
+        'type': 'string',
+        'required': True,
+        'label': ('Compute Engine Image Name (e.g.: ubuntu-1404-trusty-v20160406)'),
+        'name': GCE_IMAGE_NAME
+    },
+    GCE_IMAGE_FAMILY: {
+        'type': 'string',
+        'required': True,
+        'label': ('Compute Engine Image Family (e.g.: ubuntu-os-cloud)'),
+        'name': GCE_IMAGE_FAMILY
     },
     GCS_PROJECT_ID: {
         'type': 'string',
