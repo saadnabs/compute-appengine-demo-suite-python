@@ -53,8 +53,6 @@ oauth_decorator = oauth.decorator
 parameters = [
     user_data.DEFAULTS[user_data.GCE_PROJECT_ID],
     user_data.DEFAULTS[user_data.GCE_ZONE_NAME],
-    user_data.DEFAULTS[user_data.GCE_IMAGE_NAME],
-    user_data.DEFAULTS[user_data.GCE_IMAGE_FAMILY],
     user_data.DEFAULTS[user_data.GCE_LOAD_BALANCER_IP],
 ]
 data_handler = user_data.DataHandler(DEMO_NAME, parameters)
