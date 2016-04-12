@@ -10,6 +10,9 @@
   var DEMO_ID = '{{ demo_id }}';
   var IMAGE_NAME = '{{ image_name }}';
   var IMAGE_FAMILY = '{{ image_family }}';
+  
+  var utc = new Date().toJSON().slice(0,10);
+  document.getElementById("date-div").innerHTML = utc;
 </script>
 <script type="text/javascript" src="/js/gce.js"></script>
 <script type="text/javascript" src="/js/squares.js"></script>
@@ -20,8 +23,7 @@
 
 {% block content %}
 <h1>
-  Welcome to Quick Start! <script type="text/javascript">var utc = new Date().toJSON().slice(0,10);
-  document.write(utc);</script>
+  Welcome to Quick Start! <span id="date-div">nada</span>
 </h1>
 <div style="float:left">
 <p>
