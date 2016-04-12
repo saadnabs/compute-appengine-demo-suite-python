@@ -2,8 +2,8 @@
     "project": "compute-engine-demo",
     "compute": {
         "api_version": "v1",
-        "image": "mp-image",
-        "image_project": "nsaad-demos",
+        "image": "ubuntu-1404-trusty-v20160406",
+        "image_project": "ubuntu-os-cloud",
         "machine_type": "n1-standard-4",
         "zone": "europe-west1-d",
         "network": "default",
