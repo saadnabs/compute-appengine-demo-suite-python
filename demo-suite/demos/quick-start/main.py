@@ -80,6 +80,8 @@ def getUserDemoInfo(user):
   gce_id = data_handler.stored_user_data[user_data.GCE_PROJECT_ID]
   demo_id = '%s-%s' % (DEMO_NAME, ldap)
   project_id = '%s-%s' % (gce_id, ldap)
+  image_name = data_handler.stored_user_data[user_data.GCE_IMAGE_NAME]
+  image_family = data_handler.stored_user_data[user_data.GCE_IMAGE_FAMILY]
 
   return dict(demo_id=demo_id, ldap=ldap, project_id=project_id)
 

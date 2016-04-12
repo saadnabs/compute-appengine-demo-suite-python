@@ -30,9 +30,9 @@ jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(''))
 
 GCE_PROJECT_ID = 'gce-project-id'
 GCE_ZONE_NAME = 'gce-zone-name'
-GCE_LOAD_BALANCER_IP = 'gce-load-balancer-ip'
 GCE_IMAGE_NAME = 'gce-image-name'
 GCE_IMAGE_FAMILY = 'gce-image-family'
+GCE_LOAD_BALANCER_IP = 'gce-load-balancer-ip'
 GCS_PROJECT_ID = 'gcs-project-id'
 GCS_BUCKET = 'gcs-bucket'
 GCS_DIRECTORY = 'gcs-directory'
