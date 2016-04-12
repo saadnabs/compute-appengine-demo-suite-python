@@ -184,7 +184,7 @@ Squares.prototype.update = function(updateData) {
     if (instanceStatus.hasOwnProperty(instanceName)) {
       var status = instanceStatus[instanceName]['status'];
       statusClass = this.statusClasses_[status];
-      console.log("status: " + status);
+      //console.log("status: " + status);
       if (!statusClass) {
         statusClass = this.statusClasses_['OTHER'];
       }

@@ -71,12 +71,12 @@ Counter.prototype.update = function(updateData) {
 	  var parentNode = this.container_.parentNode;
 	  var timeDiv = parentNode.querySelector("#timer");
 	  var time = timeDiv.textContent;
-	  console.log("time at 1 running: " + time);
+	  //console.log("time at 1 running: " + time);
 	  
 	  var firstInstanceDiv = parentNode.querySelector("#first-instance");
 	  firstInstanceDiv.textContent = "First instance started up within " + time;
 	  
-	  console.log("first time counter is updated");
+	  //console.log("first time counter is updated");
   }
   
   this.counter_.setValue(updateData['stateCount'][this.targetState]);
